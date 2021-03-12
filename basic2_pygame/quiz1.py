@@ -96,6 +96,10 @@ while running:
     # 3-2. 똥 움직임
     enemy_y_pos += enemy_speed * dt
 
+    if enemy_y_pos > screen_height:
+        enemy_y_pos = 0
+        enemy_x_pos = random.randint(0, screen_width - enemy_width + 1)
+
     # 4. 충돌 처리
     character_rect = character.get_rect()
     character_rect.left = character_x_pos
@@ -114,9 +118,6 @@ while running:
     screen.blit(character, (character_x_pos, character_y_pos))
     screen.blit(enemy, (enemy_x_pos, enemy_y_pos))
     
-    if enemy_y_pos > 640:
-        enemy_y_pos = 0
-        enemy_x_pos = random.randint(0, screen_width - enemy_width + 1)
 
     pygame.display.update()
 
