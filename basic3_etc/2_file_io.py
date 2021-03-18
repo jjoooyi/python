@@ -3,8 +3,8 @@
 # readline() : 파일 객체로부터 한 줄씩 문자열을 읽는 함수
 # readlines() : 전체 내용을 한 번에 리스트에 담는 함수
 
-f = open("input.txt", "r", encoding="UTF-8")
-f.seek(9) # 9바이트 위치로 읽기 시작하는 지점 지정
+f = open("basic3_etc/input.txt", "r", encoding="UTF-8")
+f.seek(9)  # 9바이트 위치로 읽기 시작하는 지점 지정
 data = f.read()
 print(data)
 
@@ -22,7 +22,7 @@ for i, data in enumerate(lst):
 
 f.close()
 
-with open('input.txt', 'r', encoding='UTF-8') as f:
+with open('basic3_etc/input.txt', 'r', encoding='UTF-8') as f:
     lst = f.readlines()
     for i, data in enumerate(lst):
         print("{0}번째 줄: {1}".format(i+1, data), end='')

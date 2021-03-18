@@ -10,10 +10,11 @@ def process(filename):
             else:
                 dict[i] = 1
 
-dct = process("input.txt")
+
+dct = process("basic3_etc/input.txt")
 
 # 빈도수를 기준으로 내림차순 정렬
-dct = sorted(dct.items(), key=lambda a:a[1], reverse=True)
+dct = sorted(dct.items(), key=lambda a: a[1], reverse=True)
 for data, count in dct:
     if data == '\n' or data == ' ':
         continue
