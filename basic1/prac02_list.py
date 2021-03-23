@@ -59,3 +59,19 @@ print(mix_list)
 # 리스트 확장(하나의 리스트로 합치기)
 num_list.extend(mix_list)
 print(num_list)
+
+# split() 이용하여 문자열 -> 리스트 str.split(sep, maxsplit) -> list
+abc = 'With three words'
+stuff = abc.split()
+print(stuff)  # ['With', 'three', 'words']
+
+
+# line에서 uct.ac.za만 추출하는 방법
+line = 'From stephen.marquard@uct.ac.za Sat Jan 5 09:14:16 2008'
+# words는 해당 라인을 빈칸을 구분자로 하여 리스트로 저장
+words = line.split()
+print(words[1])  # stephen.marquard@uct.ac.za 출력
+email = words[1]
+address = email.split('@')
+print(address)  # ['stephen.marquard', 'uct.ac.za'] 출력
+print(address[1])  # uct.ac.za 출력

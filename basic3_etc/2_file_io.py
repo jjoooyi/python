@@ -26,3 +26,26 @@ with open('basic3_etc/input.txt', 'r', encoding='UTF-8') as f:
     lst = f.readlines()
     for i, data in enumerate(lst):
         print("{0}번째 줄: {1}".format(i+1, data), end='')
+
+# 문자열 라이브러리에 있는 rstrip() 이용하여 오른쪽에서부터 공백 지울 수 있음
+# 개행문자는 '공백'으로 취급되어 제거됨
+for line in f:
+    line = line.rstrip()
+    # if line.startswith('From: '): # 아래 두줄과 같은 동작
+    if not line.startswith('From:'):
+        continue
+    print(line)
+
+
+# 잘못된 파일명이 입력될 경우 예외처리
+fname = input('Enter the file name: ')
+try:
+    fhand = open(fname)
+except:
+    print('File cannot be opened:', fname)
+    quit()
+count = 0
+for line in fhand:
+    if line.startswith('Subject:'):
+        count = count + 1
+print('There were', count, 'subject lines in', fname)
