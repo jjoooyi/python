@@ -1,0 +1,59 @@
+Numpy의 연산과 함수
+
+
+Numpy의 기본 연산
+- Numpy는 배열에 대한 기본적인 사칙연산을 지원합니다.
+
+Numpy의 상수 연산
+1. 더하기
+2. 곱하기
+
+import numpy as np
+array = np.random.randint(1, 10, size=4).reshape(2, 2)
+result_array = array * 10
+print(result_array)
+
+
+서로 다른 형태의 Numpy 연산
+- Numpy는 서로 다른 형태의 배열을 연산할 때는 행 우선으로 수행됩니다.
+import numpy as np
+array1 = np.arange(4).reshape(2, 2)
+array2 = np.arange(2)
+array3 = array1 + array2
+print(array3)
+
+- 브로드캐스트: 형태가 다른 배열을 연산할 수 있도록 배열의 형태를 동적으로 변환
+import numpy as np
+array1 = np.arange(0, 8).reshape(2, 4)
+array2 = np.arange(0, 8).reshape(2, 4)
+array3 = np.concatenate([array1, array2], axis=0)
+array4 = np.arange(0, 4).reshape(4, 1)
+print(array3 + array4)
+
+Numpy의 마스킹 연산
+- 마스킹: 각 원소에 대하여 체크합니다.
+import numpy as np
+# Numpy 원소의 값을 조건에 따라 바꿀 때는 다음과 같이 합니다.
+# 반복문을 이용할 때보다 매우 빠르게 동작합니다.
+# 대체로 이미지 처리(Image Processing)에서 자주 활용됩니다.
+array1 = np.arange(16).reshape(4, 4)
+print(array1)
+array2 = array1 < 10
+print(array2)
+array1[array2] = 100
+print(array1)
+
+
+Numpy의 집계 함수
+import numpy as np
+array = np.arange(16).reshape(4, 4)
+print("최대값:", np.max(array))
+print("최소값:", np.min(array))
+print("합계:", np.sum(array))
+print("평균값:", np.mean(array))
+
+Numpy의 집계 함수
+import numpy as np
+array = np.arange(16).reshape(4, 4)
+print(array)
+print("합계:", np.sum(array, axis=0))
