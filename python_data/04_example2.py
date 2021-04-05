@@ -20,8 +20,8 @@ print(array)
 
 
 # 난수의 재연 (실행마다 결과 동일)
-np.random.seed(7)
-print(np.random.randint(0, 10, (2, 3)))
+np.random.seed(7)  # 난수 재연에 사용, 이거 없으면 매번 결과 달라짐
+print(np.random.randint(0, 10, (2, 3)))  # (난수생성 범위, 행렬 크기)
 
 
 # Numpy 배열 객체 복사

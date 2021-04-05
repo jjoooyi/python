@@ -1,0 +1,15 @@
+이미지를 합치는 두 가지 방법(겹쳐서 합치기)
+1. cv2.add(): Saturation 연산을 수행합니다.
+0보다 작으면 0, 255보다 크면 255로 표현
+2. np.add(): Modulo 연산을 수행합니다.
+256은 0, 257은 1로 표현
+
+import cv2
+image_1 = cv2.imread('image_1.jpg')
+image_2 = cv2.imread('image_2.png')
+result = cv2.add(image_1, image_2)
+cv2.imshow('Image', result)
+cv2.waitKey(0)
+result = image_1 + image_2
+cv2.imshow('Image', result)
+cv2.waitKey(0)
