@@ -1,6 +1,4 @@
-import urllib.request
-import urllib.parse
-import urllib.error
+import urllib.request, urllib.parse, urllib.error
 import json
 
 # Note that Google is increasingly requiring keys

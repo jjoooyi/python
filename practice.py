@@ -7,3 +7,8 @@ else:
     print(words)
 print(words)
 print(nwords)
+
+# i = hex(int(input()))
+# print(i)
+
+print(pow(2, 10))
