@@ -1,3 +1,5 @@
+# 트레이닝에 사용할 데이터 수집 및 정제
+
 import os
 import cv2
 import utils
