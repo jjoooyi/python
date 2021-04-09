@@ -1,8 +1,10 @@
+# selenium - 웹페이지 테스트 자동화 할 수 있는 프레임워크
+# 페이지 이동, 글자 입력, 클릭 등 직접 웹페이지를 컨트롤
 # pip install selenium 셀레니움 설치
-# 웹 드라이버 설치 chrome://version/ 버전 확인
+# 웹 드라이버 설치 chrome://version/ 버전 확인, 크롬 웹브라우저 자동 제어
 # chromedriver 검색 > 확인한 버전에 맞는 드라이버 다운로드 후 워크스페이스에 압축 풀어 파일 넣기
 from selenium import webdriver
-# from selenium.webdriver.common.keys import Keys
+# from selenium.webdriver.common.keys import Keys # 만약 Keys.ENTER 사용하고 싶은 경우 임포트
 import time
 
 # browser = webdriver.Chrome("./chromedriver.exe")
